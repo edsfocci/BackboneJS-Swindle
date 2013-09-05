@@ -10,6 +10,7 @@ gem 'pry-rails'
 
 # Authentication
 gem 'figaro'
+gem 'devise'
 
 
 # Gems used only for assets and not required
