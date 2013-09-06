@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130905161324) do
+ActiveRecord::Schema.define(:version => 20130906183144) do
+
+  create_table "products", :force => true do |t|
+    t.string   "title",          :null => false
+    t.string   "main_photo_url", :null => false
+    t.text     "description"
+    t.integer  "bid_price"
+    t.integer  "fixed_price"
+    t.datetime "bid_end"
+    t.integer  "seller_id",      :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "products", ["seller_id"], :name => "index_products_on_seller_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

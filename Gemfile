@@ -13,6 +13,11 @@ gem 'pry-rails'
 gem 'figaro'
 gem 'devise'
 
+# File uploading, drag-n-drop
+gem 'filepicker-rails'
+
+gem 'backbone-on-rails'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

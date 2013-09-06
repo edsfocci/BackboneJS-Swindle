@@ -1,6 +1,4 @@
-class RootController < ApplicationController
-  before_filter :authenticate_user!
-  
+class RootController < ApplicationController  
   def root
   end
 end

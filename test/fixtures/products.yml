@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  main_photo_url: MyString
+  description: MyText
+  bid_price: 1
+  fixed_price: 1
+  bid_end: 2013-09-06 11:31:44
+
+two:
+  title: MyString
+  main_photo_url: MyString
+  description: MyText
+  bid_price: 1
+  fixed_price: 1
+  bid_end: 2013-09-06 11:31:44
