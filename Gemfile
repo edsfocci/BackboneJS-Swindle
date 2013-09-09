@@ -29,6 +29,8 @@ group :assets do
 
   # JavaScript parser/compressor/beautifier
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'bootstrap-sass'
 end
 
 gem 'jquery-rails'
