@@ -14,6 +14,8 @@
     <%= render 'devise/menu/login_items' %>
   </ul>
 
+  <%= "Hello #{current_user.email}!" unless current_user.blank? %>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 

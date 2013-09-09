@@ -3,11 +3,11 @@ window.SwoopoClone = {
   Collections: {},
   Views: {},
   Routers: {},
-  initialize: function() {
-    alert('Hello from Backbone!');
+
+  initialize: function($rootEl, productsData) {
+    var products = new SwoopoClone.Collections.Products(productsData);
+
+    new SwoopoClone.Routers.Products($rootEl, products);
+    Backbone.history.start();
   }
 };
-
-$(document).ready(function(){
-  SwoopoClone.initialize();
-});

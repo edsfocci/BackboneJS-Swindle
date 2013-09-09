@@ -1,1 +1,10 @@
-<%= "Hello #{current_user.email}!" unless current_user.blank? %>
+<script type="application/json" id='bootstrapped_products_json'>
+  <%= Product.all.to_json.html_safe %>
+</script>
+
+<script type="application/javascript">
+  $(function () {
+    var productsData = JSON.parse($('#bootstrapped_products_json').html());
+    window.SwoopoClone.initialize($('body'), productsData);
+  });
+</script>
