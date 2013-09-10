@@ -12,7 +12,13 @@ body { padding-top: 60px; }
 }
 
 .row {
-  margin-left: -5px;
+  margin: auto;
+}
+
+[class*="span"] {
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-right: -5px;
 }
 
 .product {
@@ -34,4 +40,8 @@ body { padding-top: 60px; }
   width:210px;
   height:110px;
   align:center;
+}
+
+.productImage img {
+  max-height:110px;
 }
