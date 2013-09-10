@@ -5,14 +5,21 @@ SwoopoClone.Routers.Products = Backbone.Router.extend({
   },
 
   routes: {
-    '': 'index'
+    '': 'index',
+    'products/new': 'new'
   },
 
   index: function () {
     var productsIndex = new SwoopoClone.Views.ProductsIndex({
       collection: this.products
     });
+    console.log(this.$rootEl);
+    this.$rootEl.html(productsIndex.render().$el);
+  },
 
-    this.$rootEl.append(productsIndex.render().$el);
+  new: function () {
+    var productsNew = new SwoopoClone.Views.ProductsNew({});
+
+    this.$rootEl.html(productsNew.render().$el);
   }
 });

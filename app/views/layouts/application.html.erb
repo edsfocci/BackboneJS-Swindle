@@ -31,7 +31,9 @@
 
     <p><%= "Hello #{current_user.email}!" unless current_user.blank? %></p>
 
-    <%= yield %>
+    <div id='content'>
+      <%= yield %>
+    </div>
 
   </div>
 

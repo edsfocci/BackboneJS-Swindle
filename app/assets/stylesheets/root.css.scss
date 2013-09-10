@@ -12,7 +12,7 @@ body { padding-top: 60px; }
 }
 
 .row {
-  margin: auto;
+  margin-left: -40px;
 }
 
 [class*="span"] {
@@ -21,11 +21,15 @@ body { padding-top: 60px; }
   margin-right: -5px;
 }
 
+#content {
+  margin-top: 30px;
+}
+
 .product {
   width:230px;
   height:250px;
   text-align:center;
-  border:1px solid #393A37;
+  border:1px solid #585858;
 }
 
 .productTitle {
