@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
   
   has_many :products,
   foreign_key: :seller_id
+
+  has_many :winning_products,
+  class_name: 'Product',
+  foreign_key: :current_winner_id
 end

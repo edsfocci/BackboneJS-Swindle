@@ -6,5 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Product.create({title: 'Pirate',
-  main_photo_url: 'https://www.filepicker.io/api/file/2rz0OZhQ6KtHYqyySF2S',
-  description: 'ARRRRRR!', bid_price: 0, fixed_price: 10000, seller_id: 1})
+  main_photo_url: 'https://www.filepicker.io/api/file/abCUUejsQCqrjCtICFq1',
+  description: 'ARRRRRR!', bid_price: 1, fixed_price: 10000, seller_id: 1,
+  current_winner_id: 1})
+Product.create({title: 'Ninja',
+  main_photo_url: 'https://www.filepicker.io/api/file/0HsL6EPSE6QH9DYNP1jA',
+  description: 'Swoosh!', bid_price: 1, fixed_price: 10000, seller_id: 1,
+  current_winner_id: 1})

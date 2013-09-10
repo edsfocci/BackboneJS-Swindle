@@ -6,3 +6,32 @@
 body { padding-top: 60px; }
 
 @import 'bootstrap-responsive';
+
+.navbar .brand {
+  margin-left: -5px;
+}
+
+.row {
+  margin-left: -5px;
+}
+
+.product {
+  width:230px;
+  height:250px;
+  text-align:center;
+  border:1px solid #393A37;
+}
+
+.productTitle {
+  padding-top:5px;
+  margin:auto;
+  width:210px;
+  height:25px;
+}
+
+.productImage {
+  margin:auto;
+  width:210px;
+  height:110px;
+  align:center;
+}

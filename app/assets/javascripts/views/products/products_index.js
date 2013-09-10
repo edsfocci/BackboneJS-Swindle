@@ -1,4 +1,8 @@
 SwoopoClone.Views.ProductsIndex = Backbone.View.extend({
+  events: {
+    "click button.bid_button": "place_bid"
+  },
+  
   template: JST['products/index'],
 
   render: function () {
@@ -8,5 +12,9 @@ SwoopoClone.Views.ProductsIndex = Backbone.View.extend({
       products: this.collection
     }));
     return this;
+  },
+
+  place_bid: function () {
+
   }
 });

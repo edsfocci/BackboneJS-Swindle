@@ -14,17 +14,19 @@
 ActiveRecord::Schema.define(:version => 20130906183144) do
 
   create_table "products", :force => true do |t|
-    t.string   "title",          :null => false
-    t.string   "main_photo_url", :null => false
+    t.string   "title",             :null => false
+    t.string   "main_photo_url",    :null => false
     t.text     "description"
     t.integer  "bid_price"
     t.integer  "fixed_price"
     t.datetime "bid_end"
-    t.integer  "seller_id",      :null => false
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.integer  "seller_id",         :null => false
+    t.integer  "current_winner_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
+  add_index "products", ["current_winner_id"], :name => "index_products_on_current_winner_id"
   add_index "products", ["seller_id"], :name => "index_products_on_seller_id"
 
   create_table "users", :force => true do |t|
