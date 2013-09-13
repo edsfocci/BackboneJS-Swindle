@@ -5,7 +5,7 @@
   <br><br>
 
   <label for='product_main_photo_url'>Main Photo</label>
-  <input type='text' id='product_main_photo_url' name='product[main_photo_url]'>
+  <input type='url' id='product_main_photo_url' name='product[main_photo_url]'>
   <br>
   <button id="product_main_photo_button" type="button">
     Pick File
@@ -26,8 +26,13 @@
 
   <br><br>
 
-  <label for='product_bid_end'>Bid End</label>
-  TODO
+  <label for='product_bid_end_date'>Bid End Date</label>
+  <input type='date' id='product_bid_end_date' name='bid_end[date]'>
+
+  <br><br>
+
+  <label for='product_bid_end_time'>Bid End Time</label>
+  <input type='time' id='product_bid_end_time' name='bid_end[time]'>
 
   <br><br>
 
@@ -45,3 +50,8 @@
   <input type='hidden' name='product[current_winner_id]' value='1'>
   <button class='submit'>New Product</button>
 </form>
+
+<script>
+  $('#product_bid_end_date').datepicker();
+  $('#product_bid_end_time').timepicker();
+</script>

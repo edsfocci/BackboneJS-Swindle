@@ -21,6 +21,9 @@ SwoopoClone.Views.ProductsNew = Backbone.View.extend({
     var dat = this;
 
     var formData = $(event.currentTarget).serializeJSON();
+    var bid_end = this.convertToDateTime(formData.bid_end.date,
+      formData.bid_end.time);
+    formData.product.bid_end = bid_end;
     var product = new SwoopoClone.Models.Product(formData.product);
 
     product.save(product.attributes ,{
@@ -29,5 +32,14 @@ SwoopoClone.Views.ProductsNew = Backbone.View.extend({
         Backbone.history.navigate("#/");
       }
     });
+  },
+
+  convertToDateTime: function (date, time) {
+    var dateTime = '';
+    var dateArry = date.split('/');
+    dateArry = [dateArry[2], dateArry[0], dateArry[1]];
+    dateTime += dateArry.join('-') + 'T' + time + ':00Z';
+
+    return dateTime;
   }
 });

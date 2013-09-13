@@ -14,7 +14,9 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
-//= require jquery.serializeJSON.min
+//= require ../../../vendor/assets/javascripts/jquery-ui.min
+//= require ../../../vendor/assets/javascripts/jquery-ui-timepicker-addon
+//= require_tree ../../../vendor/assets/javascripts
 //= require swoopo_clone
 //= require_tree ../templates
 //= require_tree ./models
