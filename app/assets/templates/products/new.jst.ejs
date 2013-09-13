@@ -2,28 +2,47 @@
   <label for='product_title'>Title</label>
   <input type='text' id='product_title' name='product[title]'>
 
-  <br>
+  <br><br>
 
-  <label for='product_main_photo'>Main Photo</label>
-  TODO
-
+  <label for='product_main_photo_url'>Main Photo</label>
+  <input type='text' id='product_main_photo_url' name='product[main_photo_url]'
+  value='<%= photoURL %>'>
   <br>
+  <button id="product_main_photo_button" type="button">
+    Pick File
+  </button>
+
+  <!--div class="" style="border: 1px dashed rgb(170, 170, 170);
+  display: inline-block; margin: 0px 0px 0px 4px;
+  border-radius: 3px 3px 3px 3px; background-color: rgb(243, 243, 243);
+  color: rgb(51, 51, 51); font-size: 14px; line-height: 22px; padding: 2px 4px;
+  vertical-align: middle; cursor: pointer; overflow: hidden;">
+    Or drop files here
+  </div-->
+
+  <br><br>
 
   <label for='product_bid_price'>Initial Bid Price</label>
   <input type='text' id='product_bid_price' name='product[bid_price]'>
 
-  <br>
+  <br><br>
 
   <label for='product_bid_end'>Bid End</label>
   TODO
 
-  <br>
+  <br><br>
 
   <label for='product_fixed_price'>Fixed Price</label>
   <input type='text' id='product_fixed_price' name='product[fixed_price]'>
 
+  <br><br>
+
   <label for='product_description'>Description</label>
   <textarea id='product_description' name='product[description]'></textarea>
 
-  <input type='submit' value='New Product'>
+  <br><br>
+
+  <input type='hidden' name='product[seller_id]' value='1'>
+  <input type='hidden' name='product[current_winner_id]' value='1'>
+  <button class='submit'>New Product</button>
 </form>

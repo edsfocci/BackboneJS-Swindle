@@ -13,12 +13,13 @@ SwoopoClone.Routers.Products = Backbone.Router.extend({
     var productsIndex = new SwoopoClone.Views.ProductsIndex({
       collection: this.products
     });
-    console.log(this.$rootEl);
     this.$rootEl.html(productsIndex.render().$el);
   },
 
   new: function () {
-    var productsNew = new SwoopoClone.Views.ProductsNew({});
+    var productsNew = new SwoopoClone.Views.ProductsNew({
+      collection: this.products
+    });
 
     this.$rootEl.html(productsNew.render().$el);
   }

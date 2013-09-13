@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(:version => 20130906183144) do
     t.string   "title",             :null => false
     t.string   "main_photo_url",    :null => false
     t.text     "description"
-    t.integer  "bid_price"
-    t.integer  "fixed_price"
+    t.integer  "bid_price",         :null => false
+    t.integer  "fixed_price",       :null => false
     t.datetime "bid_end"
     t.integer  "seller_id",         :null => false
     t.integer  "current_winner_id"

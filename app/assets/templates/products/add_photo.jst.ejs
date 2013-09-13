@@ -1,0 +1,9 @@
+<script>
+  filepicker.pickAndStore({mimetype:"image/*"},
+  {location:"S3", path: '/', access: 'public'},
+  function(InkBlobs){
+    console.log(JSON.stringify(InkBlobs));
+    var photoURL = AWSBucket + InkBlobs[0]['key'];
+    $('#product_main_photo_url').val(photoURL);
+  });
+</script>

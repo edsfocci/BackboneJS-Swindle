@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
+//= require jquery.serializeJSON.min
 //= require swoopo_clone
 //= require_tree ../templates
 //= require_tree ./models
