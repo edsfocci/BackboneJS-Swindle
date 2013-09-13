@@ -8,12 +8,12 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :fixed_price, :null => false
       t.datetime :bid_end
       t.integer :seller_id, :null => false
-      # t.integer :current_winner_id
+      t.integer :current_winner_id
 
       t.timestamps
     end
 
     add_index :products, :seller_id
-    # add_index :products, :current_winner_id
+    add_index :products, :current_winner_id
   end
 end
