@@ -14,6 +14,6 @@ class CreateProducts < ActiveRecord::Migration
     end
 
     add_index :products, :seller_id
-    add_index :products, :current_winner_id
+    # add_index :products, :current_winner_id
   end
 end
