@@ -21,6 +21,7 @@ SwoopoClone.Views.ProductsNew = Backbone.View.extend({
     var dat = this;
 
     var formData = $(event.currentTarget).serializeJSON();
+    console.log(event);
     var bid_end = this.convertToDateTime(formData.bid_end.date,
       formData.bid_end.time);
     formData.product.bid_end = bid_end;
