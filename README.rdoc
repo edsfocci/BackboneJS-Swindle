@@ -1,4 +1,2 @@
-= Swoopo Clone
-=== An App Academy Capstone Project
-
-For documentation, please visit the wiki[https://github.com/edsfocci/academy-swoopo_clone/wiki].
+= Swindle
+=== A clone of DealDash.com (formerly Swoopo.com)
