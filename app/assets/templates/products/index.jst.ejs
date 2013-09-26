@@ -7,109 +7,27 @@
       <div class='productTitle'>
         <%= product.escape('title') %>
       </div>
+
       <br>
+
       <div class='productImage'>
         <img src="<%= product.escape('main_photo_url') %>">
       </div>
+
       <br>
-      $ <%= product.escape('bid_price') / 100 %>
+
+      $ <%= (product.escape('bid_price') / 100).toFixed(2) %>
+
       <br>
+
       <%= product.escape('current_winner_id') %>
+
       <br>
+
       <button class='bid_button' data-id="<%= product.escape('id') %>">
-        BID NAO
+        BID NOW
       </button>
     </div>
 
   <% }); %>
-
-  <div class='span product'>
-    <div class='productTitle'>
-      f sdfgr rt hrt htrwetrh ew sd hgetgs sht ewre hwrethr
-    </div>
-    <br>
-    <div class='productImage'>
-      <img src="">
-    </div>
-    <br>
-    $ 0.01
-    <br>
-    1
-    <br>
-    <button class='bid_button' data-id="9001">
-      BID NAO
-    </button>
-  </div>
-
-  <div class='span product'>
-    <div class='productTitle'>
-      f sdfgr rt hrt htrwetrh ew sd hgetgs sht ewre hwrethr
-    </div>
-    <br>
-    <div class='productImage'>
-      <img src="https://i.chzbgr.com/maxW500/7765397504/h5988EFC1/">
-    </div>
-    <br>
-    $ 0.01
-    <br>
-    1
-    <br>
-    <button class='bid_button' data-id="9002">
-      BID NAO
-    </button>
-  </div>
-
-  <div class='span product'>
-    <div class='productTitle'>
-      f sdfgr rt hrt htrwetrh ew sd hgetgs sht ewre hwrethr
-    </div>
-    <br>
-    <div class='productImage'>
-      <img src="https://i.chzbgr.com/maxW500/7765397504/h5988EFC1/">
-    </div>
-    <br>
-    $ 0.01
-    <br>
-    1
-    <br>
-    <button class='bid_button' data-id="9002">
-      BID NAO
-    </button>
-  </div>
-
-  <div class='span product'>
-    <div class='productTitle'>
-      f sdfgr rt hrt htrwetrh ew sd hgetgs sht ewre hwrethr
-    </div>
-    <br>
-    <div class='productImage'>
-      <img src="https://i.chzbgr.com/maxW500/7765397504/h5988EFC1/">
-    </div>
-    <br>
-    $ 0.01
-    <br>
-    1
-    <br>
-    <button class='bid_button' data-id="9002">
-      BID NAO
-    </button>
-  </div>
-
-  <div class='span product'>
-    <div class='productTitle'>
-      f sdfgr rt hrt htrwetrh ew sd hgetgs sht ewre hwrethr
-    </div>
-    <br>
-    <div class='productImage'>
-      <img src="https://i.chzbgr.com/maxW500/7765397504/h5988EFC1/">
-    </div>
-    <br>
-    $ 0.01
-    <br>
-    1
-    <br>
-    <button class='bid_button' data-id="9002">
-      BID NAO
-    </button>
-  </div>
 </div>
