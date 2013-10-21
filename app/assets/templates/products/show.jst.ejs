@@ -1,0 +1,16 @@
+<h2><%= product.escape('title') %></h2>
+
+<div class='row-fluid'>
+  <div class='span6'>
+    <img src="<%= product.escape('main_photo_url') %>">
+    <%= product.escape('description') %>
+  </div>
+
+  <div class='span6' align='right'>
+    $<%= (product.escape('fixed_price') / 100).toFixed(2) %>
+    <br>
+    <button class='add_to_cart_button' data-id="<%= product.escape('id') %>">
+      Add to Cart
+    </button>
+  </div>
+</div>

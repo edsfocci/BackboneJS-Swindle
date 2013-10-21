@@ -1,3 +1,3 @@
-SwoopoClone.Collections.Products = Backbone.Collection.extend({
-  model: SwoopoClone.Models.Product
+Swindle.Collections.Products = Backbone.Collection.extend({
+  model: Swindle.Models.Product
 });

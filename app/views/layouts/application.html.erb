@@ -11,26 +11,39 @@
 </head>
 <body>
 
-  <div class="container">
+  <div class="container-fluid">
 
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar divider-vertical navbar-fixed-top">
       <div class="navbar-inner">
         <a class="brand" href="/">Swindle</a>
-        <ul class="nav nav-pills pull-right">
-          <%= render 'devise/menu/registration_items' %>
+
+        <ul class="nav">
+          <li><a><%= notice %></a></li>
+          <li><a><%= alert %></a></li>
+        </ul>
+
+        <ul class="nav pull-right">
+
+          <% if current_user.blank? %>
+            <%= render 'devise/menu/registration_items' %>
+          <% else %>
+            <li><a>Hello <%= current_user.email %>!</a></li>
+            <li><a>Account</a></li>
+          <% end %>
+
+          <li><%= link_to 'Cart', cart_url %></li>
           <%= render 'devise/menu/login_items' %>
+
         </ul>
       </div>
     </div>
 
-    <%= notice %>
-    <%= alert %>
+    <%#
     <form class="form-search pull-right">
       <input type="text" class="input-medium search-query">
       <button type="submit" class="btn">Search Auctions</button>
     </form>
-
-    <p><%= "Hello #{current_user.email}!" unless current_user.blank? %></p>
+    %>
 
     <div id='content'>
       <%= yield %>

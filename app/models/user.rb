@@ -11,7 +11,11 @@ class User < ActiveRecord::Base
   has_many :products,
   foreign_key: :seller_id
 
-  has_many :winning_products,
-  class_name: 'Product',
-  foreign_key: :current_winner_id
+  has_many :pending_purchases,
+  class_name: 'Cart'
+
+  # Future capability
+  # has_many :winning_products,
+  # class_name: 'Product',
+  # foreign_key: :current_winner_id
 end

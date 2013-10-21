@@ -1,4 +1,4 @@
-SwoopoClone.Routers.Products = Backbone.Router.extend({
+Swindle.Routers.Products = Backbone.Router.extend({
   initialize: function ($rootEl, products) {
     this.$rootEl = $rootEl;
     this.products = products;
@@ -6,21 +6,31 @@ SwoopoClone.Routers.Products = Backbone.Router.extend({
 
   routes: {
     '': 'index',
-    'products/new': 'new'
+    'products/new': 'new',
+    'products/:id': 'show'
   },
 
   index: function () {
-    var productsIndex = new SwoopoClone.Views.ProductsIndex({
+    var productsIndex = new Swindle.Views.ProductsIndex({
       collection: this.products
     });
     this.$rootEl.html(productsIndex.render().$el);
   },
 
   new: function () {
-    var productsNew = new SwoopoClone.Views.ProductsNew({
+    var productsNew = new Swindle.Views.ProductsNew({
       collection: this.products
     });
 
     this.$rootEl.html(productsNew.render().$el);
+  },
+
+  show: function (id) {
+    var product = this.products.get(id);
+    var productsShow = new Swindle.Views.ProductsShow({
+      model: product
+    });
+
+    this.$rootEl.html(productsShow.render().$el);
   }
 });

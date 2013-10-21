@@ -17,7 +17,7 @@
 //= require ../../../vendor/assets/javascripts/jquery-ui.min
 //= require ../../../vendor/assets/javascripts/jquery-ui-timepicker-addon
 //= require_tree ../../../vendor/assets/javascripts
-//= require swoopo_clone
+//= require swindle
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

@@ -1,4 +1,4 @@
-SwoopoClone.Views.ProductsNew = Backbone.View.extend({
+Swindle.Views.ProductsNew = Backbone.View.extend({
   events: {
     "click button#product_main_photo_button": "add_photo",
     'submit form': 'submit'
@@ -18,18 +18,26 @@ SwoopoClone.Views.ProductsNew = Backbone.View.extend({
 
   submit: function (event) {
     event.preventDefault();
-    var dat = this;
+    var that = this;
 
     var formData = $(event.currentTarget).serializeJSON();
-    console.log(event);
-    var bid_end = this.convertToDateTime(formData.bid_end.date,
-      formData.bid_end.time);
-    formData.product.bid_end = bid_end;
-    var product = new SwoopoClone.Models.Product(formData.product);
+
+    formData.product.bid_price = 0;
+
+    var fixed_price = Math.round(formData.product.fixed_price * 100)
+    formData.product.fixed_price = fixed_price;
+
+    console.log(formData.product)
+
+    // Future capability
+    // var bid_end = this.convertToDateTime(formData.bid_end.date,
+    //   formData.bid_end.time);
+    // formData.product.bid_end = bid_end;
+    var product = new Swindle.Models.Product(formData.product);
 
     product.save(product.attributes ,{
       success: function () {
-        dat.collection.add(product);
+        that.collection.add(product);
         Backbone.history.navigate("#/");
       }
     });

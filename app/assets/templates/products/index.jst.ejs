@@ -1,33 +1,65 @@
+<!-- Feature to add in future -->
+<!--div class='row-fluid'-->
+  <!--form class="form-search pull-right"-->
+    <!--input type="text" class="input-medium search-query"-->
+    <!--button type="submit" class="btn"Search Auctions/button-->
+  <!--/form-->
+<!--/div-->
+
 <a href='#/products/new'>New</a>
 
 <div class='row-fluid'>
   <% products.each(function (product) { %>
 
     <div class='span product'>
-      <div class='productTitle'>
-        <%= product.escape('title') %>
+      <a href='#/products/<%= product.escape('id') %>'>
+        <div class='productTitle'>
+            <%= product.escape('title') %>
+        </div>
+
+        <br>
+
+        <div class='productImage'>
+            <img src="<%= product.escape('main_photo_url') %>">
+        </div>
+      </a>
+
+      <br>
+
+      <div class='productPrice'>
+        $<%= (product.escape('fixed_price') / 100).toFixed(2) %>
       </div>
 
       <br>
 
-      <div class='productImage'>
-        <img src="<%= product.escape('main_photo_url') %>">
-      </div>
-
-      <br>
-
-      $ <%= (product.escape('bid_price') / 100).toFixed(2) %>
-
-      <br>
-
-      <%= product.escape('current_winner_id') %>
-
-      <br>
-
-      <button class='bid_button' data-id="<%= product.escape('id') %>">
-        BID NOW
+      <button class='add_to_cart_button' data-id="<%= product.escape('id') %>">
+        Quick-Add to Cart
       </button>
     </div>
 
   <% }); %>
+
+  <div class='span product'>
+    <div class='productTitle'>
+      Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+    </div>
+
+    <br>
+
+    <div class='productImage'>
+      <img src="http://girlchasesglobe.com/shannon/wp-content/uploads/2012/12/Peekaboo_Giraffe.jpg">
+    </div>
+
+    <br>
+
+    <div class='productPrice'>
+      $0.68
+    </div>
+
+    <br>
+
+    <button>
+      Quick-Add to Cart
+    </button>
+  </div>
 </div>

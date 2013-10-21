@@ -1,21 +1,23 @@
-SwoopoClone.Views.ProductsIndex = Backbone.View.extend({
+Swindle.Views.ProductsIndex = Backbone.View.extend({
   events: {
-    "click button.bid_button": "place_bid"
+    "click button.add_to_cart_button": "add_to_cart"
   },
   
   template: JST['products/index'],
 
   render: function () {
-    var dat = this;
-
     this.$el.html(this.template({
       products: this.collection
     }));
     return this;
   },
 
+  add_to_cart: function (event) {
+    //
+  },
+
   place_bid: function (event) {
-    var dat = this;
+    var that = this;
 
     var productId = $(event.currentTarget).attr('data-id');
 
@@ -25,7 +27,7 @@ SwoopoClone.Views.ProductsIndex = Backbone.View.extend({
     product.set('bid_price', current_bid_price + 1);
     product.save(product.attributes, {
       success: function () {
-        dat.render();
+        that.render();
       },
 
       error: function () {
