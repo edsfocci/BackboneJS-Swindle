@@ -8,6 +8,7 @@ window.Swindle = {
     var products = new Swindle.Collections.Products(productsData);
 
     new Swindle.Routers.Products($rootEl, products);
+    new Swindle.Routers.Carts($rootEl);
     Backbone.history.start();
   }
 };

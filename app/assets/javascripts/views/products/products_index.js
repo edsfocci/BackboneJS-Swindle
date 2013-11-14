@@ -13,15 +13,25 @@ Swindle.Views.ProductsIndex = Backbone.View.extend({
   },
 
   add_to_cart: function (event) {
-    //
+    var product_id = $(event.currentTarget).attr('data-id');
+
+    var cart = new Swindle.Models.Cart({
+      product_id: product_id
+    });
+
+    cart.save(cart.attributes, {
+      success: function () {
+        //
+      }
+    });
   },
 
   place_bid: function (event) {
     var that = this;
 
-    var productId = $(event.currentTarget).attr('data-id');
+    var product_id = $(event.currentTarget).attr('data-id');
 
-    var product = this.collection.get(productId);
+    var product = this.collection.get(product_id);
 
     var current_bid_price = product.get('bid_price');
     product.set('bid_price', current_bid_price + 1);
