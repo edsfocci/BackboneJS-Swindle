@@ -5,8 +5,12 @@ class Product < ActiveRecord::Base
   validates :title, :description, :bid_price, :fixed_price,
     :seller_id, presence: true
 
-  has_many :pending_sales,
+  has_many :cart_holds,
   class_name: 'Cart'
+
+  has_many :pending_sales,
+  through: :cart_holds,
+  source: :user
 
   belongs_to :seller,
   class_name: 'User'

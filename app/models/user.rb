@@ -11,8 +11,12 @@ class User < ActiveRecord::Base
   has_many :products,
   foreign_key: :seller_id
 
-  has_many :pending_purchases,
+  has_many :cart_items,
   class_name: 'Cart'
+
+  has_many :pending_purchases,
+  through: :cart_items,
+  source: :product
 
   # Future capability
   # has_many :winning_products,

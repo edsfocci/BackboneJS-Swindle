@@ -11,6 +11,13 @@ class CartsController < ApplicationController
     cart.save
     render json: cart
   end
+
+  def destroy
+    cart = current_user.cart_items.find_by_product_id(params[:product_id])
+    cart.destroy
+
+    render json: cart, status: 200
+  end
 end
 
 # cart POST   /cart(.:format)                carts#create

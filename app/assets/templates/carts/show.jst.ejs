@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Price</th>
+  </tr>
+  <% carts.forEach( function (item) { %>
+    <tr>
+      <th><%= item.title %></th>
+      <th>$ <%= (item.fixed_price / 100).toFixed(2) %></th>
+      <th><a style="cursor: pointer;" class='remove_from_cart'
+                                                      data-id='<%= item.id %>'>
+        Remove from cart
+      </a></th>
+    </tr>
+  <% }) %>
+</table>
